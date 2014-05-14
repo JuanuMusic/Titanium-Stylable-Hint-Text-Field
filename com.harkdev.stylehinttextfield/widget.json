@@ -1,0 +1,13 @@
+{
+	"id": "com.harkdev.stylehinttextfield",
+	"name": "Stylable Hint Text Field",
+	"description" : "A TextField implementation that allows Styling for the Hint Text",
+	"author": "Hark Development",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2012",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"2.1",
+	"tags":"",
+	"platforms":"android,blackberry,ios,mobileweb,tizen"
+}

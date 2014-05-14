@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="vwContainer">
+	    <TextField id="txtField" onChange="txtField_Change"></TextField>
+	    <Label id="lblHint"></Label>
+	</View>
+</Alloy>

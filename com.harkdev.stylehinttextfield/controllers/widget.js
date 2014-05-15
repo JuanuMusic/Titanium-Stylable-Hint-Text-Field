@@ -65,8 +65,7 @@ function initTextField()
 	if (args.borderRadius != null) $.txtField.borderRadius = args.borderRadius;
 	if (args.borderWidth != null) $.txtField.borderWidth = args.borderWidth;
 	if (args.borderColor != null) $.txtField.borderColor = args.borderColor;
-	if (args.backgroundColor != null) $.txtField.backgroundColor = args.backgroundColor;
-	
+	if (args.backgroundColor != null) $.txtField.backgroundColor = args.backgroundColor;	
 }
 
 /***
@@ -92,8 +91,31 @@ function txtField_Change(e)
 	$.lblHint.visible = ($.txtField.value.trim() == "");
 }
 
-// Export the TextField Value.
-exports.value = $.txtField.value;
+// EXPORTS
+// Value
+function getValue() { return $.txtField.value; };
+function setValue(val) { $.txtField.value = val; };
+exports.getValue = getValue; 
+exports.setValue = setValue;
+
+Object.defineProperty($, "value", {
+    get: getValue,
+    set: setValue
+});
+
+// Touch enabled
+function getTouchEnabled() { return $.txtField.touchEnabled; };
+function setTouchEnabled(val) { $.txtField.touchEnabled = val; };
+exports.getTouchEnabled = getTouchEnabled; 
+exports.setTouchEnabled = setTouchEnabled;
+
+Object.defineProperty($, "touchEnabled", {
+    get: getTouchEnabled,
+    set: setTouchEnabled
+});
+
+// Focus
+exports.focus = function () { $.txtField.focus(); };
 
 initView();
 initTextField();

@@ -19,6 +19,7 @@ args.value = args.value || "";
 args.passwordMask = args.passwordMask || false;
 args.borderRadius = args.borderRadius || null;
 args.borderWidth = args.borderWidth || null;
+args.borderColor = args.borderColor || null;
 args.backgroundColor = args.backgroundColor || null;
 
 /***
@@ -63,6 +64,7 @@ function initTextField()
 	$.txtField.value = args.value;
 	if (args.borderRadius != null) $.txtField.borderRadius = args.borderRadius;
 	if (args.borderWidth != null) $.txtField.borderWidth = args.borderWidth;
+	if (args.borderColor != null) $.txtField.borderColor = args.borderColor;
 	if (args.backgroundColor != null) $.txtField.backgroundColor = args.backgroundColor;
 	
 }

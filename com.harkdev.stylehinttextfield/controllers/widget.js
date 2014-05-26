@@ -88,13 +88,25 @@ function initLabel()
  */
 function txtField_Change(e)
 {
-	$.lblHint.visible = ($.txtField.value.trim() == "");
+    showHideHint();
+}
+
+/***
+ * Processes the hiding or showing of the hint label.
+ */
+function showHideHint()
+{
+    $.lblHint.visible = ($.txtField.value.trim() == "");
 }
 
 // EXPORTS
 // Value
 function getValue() { return $.txtField.value; };
-function setValue(val) { $.txtField.value = val; };
+function setValue(val)
+{
+    $.txtField.value = val;
+    showHideHint();
+};
 exports.getValue = getValue; 
 exports.setValue = setValue;
 
